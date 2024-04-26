@@ -6,7 +6,7 @@ import re
 from PyPDF2 import PdfReader
 from docx import Document
 
-app = Flask(__name__,static_url_path='/static')
+app = Flask(__name__, static_url_path='/static')
 
 def extract_information_from_file(file_path):
     extracted_text = ''
@@ -78,5 +78,5 @@ def upload_files():
 
     return render_template('index.html')
 
-if __name__ == '__main__':
-    app.run(debug=False,host='0.0.0.0',port=8080)
+# Remove the app.run() part as it will be handled by GitHub Actions
+
